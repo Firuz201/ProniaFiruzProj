@@ -59,7 +59,7 @@ namespace Pronia.Areas.Admin.Controllers
 
 		public IActionResult Update(Shipping shipping)
 		{
-			var existShipping = _context.Sliders.Find(shipping.Id);
+			var existShipping = _context.Shippings.Find(shipping.Id);
 
 			if (existShipping is null)
 				return NotFound();
@@ -68,7 +68,7 @@ namespace Pronia.Areas.Admin.Controllers
 			existShipping.Description = shipping.Description;
 			existShipping.ImageUrl = shipping.ImageUrl;
 
-			_context.Sliders.Update(existShipping);
+			_context.Shippings.Update(existShipping);
 			_context.SaveChanges();
 		
 
