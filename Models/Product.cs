@@ -16,7 +16,7 @@ namespace Pronia.Models
         public string SKU { get; set; }
         [Required]
         public int CategoryId { get; set; }
-        public Category Category { get; set; }
+        public Category? Category { get; set; }
         [Required]
         public string MainImageUrl { get; set; }
         [Required]
